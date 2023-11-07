@@ -1,5 +1,9 @@
 import styles from "./NoteList.css";
 
+export function links() {
+  return [{ rel: "stylesheet", href: styles }];
+}
+
 function NoteList({ notes }) {
   return (
     <ul id="note-list">
@@ -32,7 +36,3 @@ function NoteList({ notes }) {
 }
 
 export default NoteList;
-
-export function links() {
-  return [{ rel: "stylesheet", href: styles, as: "style" }];
-}

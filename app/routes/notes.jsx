@@ -3,6 +3,11 @@ import { useLoaderData } from "@remix-run/react";
 import NewNote, { links as newNoteLinks } from "~/components/NewNote";
 import NoteList, { links as noteListLinks } from "~/components/NoteList";
 import { getStoredNotes, storeNotes } from "~/data/notes";
+
+export function links() {
+  return [...newNoteLinks(), ...noteListLinks()];
+}
+
 export default function NotesPage() {
   const notes = useLoaderData();
 
@@ -31,8 +36,4 @@ export async function action({ request }) {
 export async function loader() {
   const notes = await getStoredNotes();
   return notes;
-}
-
-export function links() {
-  return [...newNoteLinks(), ...noteListLinks()];
 }

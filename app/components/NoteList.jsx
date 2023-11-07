@@ -34,5 +34,5 @@ function NoteList({ notes }) {
 export default NoteList;
 
 export function links() {
-  return [{ rel: "stylesheet", href: styles }];
+  return [{ rel: "stylesheet", href: styles, as: "style" }];
 }

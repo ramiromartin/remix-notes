@@ -5,14 +5,10 @@ function MainNavigation() {
     <nav id="main-navigation">
       <ul>
         <li className="nav-item">
-          <NavLink prefetch="render" to="/">
-            Home
-          </NavLink>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink prefetch="render" to="/notes">
-            My Notes
-          </NavLink>
+          <NavLink to="/notes">My Notes</NavLink>
         </li>
       </ul>
     </nav>

@@ -8,6 +8,13 @@ export function links() {
   return [...newNoteLinks(), ...noteListLinks()];
 }
 
+export const meta = () => {
+  return [
+    { title: "All Notes | Remix" },
+    { name: "description", content: "All your notes" },
+  ];
+};
+
 export default function NotesPage() {
   const notes = useLoaderData();
 
